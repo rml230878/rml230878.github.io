@@ -1636,26 +1636,101 @@ input, select, textarea {
 		text-align: center;
 	}
 
-		#footer .copyright {
-			letter-spacing: 0.2rem;
-			font-size: 0.6rem;
-			opacity: 0.75;
-			margin-bottom: 0;
-			text-transform: uppercase;
-		}
+	#footer .copyright {
+		letter-spacing: 0.2rem;
+		font-size: 0.6rem;
+		opacity: 0.75;
+		margin-bottom: 0;
+		text-transform: uppercase;
+	}
 
-		body.is-article-visible #footer {
-			-moz-transform: scale(0.95);
-			-webkit-transform: scale(0.95);
-			-ms-transform: scale(0.95);
-			transform: scale(0.95);
-			-moz-filter: blur(0.1rem);
-			-webkit-filter: blur(0.1rem);
-			-ms-filter: blur(0.1rem);
-			filter: blur(0.1rem);
-			opacity: 0;
-		}
+	body.is-article-visible #footer {
+		-moz-transform: scale(0.95);
+		-webkit-transform: scale(0.95);
+		-ms-transform: scale(0.95);
+		transform: scale(0.95);
+		-moz-filter: blur(0.1rem);
+		-webkit-filter: blur(0.1rem);
+		-ms-filter: blur(0.1rem);
+		filter: blur(0.1rem);
+		opacity: 0;
+	}
 
-		body.is-preload #footer {
-			opacity: 0;
-		}
+	body.is-preload #footer {
+		opacity: 0;
+	}
+
+	/* Simple carousel */
+	.simple-carousel {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	margin: 2rem 0;
+	overflow: hidden;
+	border-radius: 0.5rem;
+	}
+
+	.simple-carousel .carousel-track {
+	position: relative;
+	width: 100%;
+	min-height: 300px;
+	}
+
+	.simple-carousel .carousel-slide {
+	display: none;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 0.5rem;
+	}
+
+	.simple-carousel .carousel-slide.active {
+	display: block;
+	}
+
+	.simple-carousel .carousel-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.45);
+	border: none;
+	color: #ffffff;
+	font-size: 2rem;
+	line-height: 1;
+	padding: 0.35rem 0.7rem;
+	cursor: pointer;
+	z-index: 2;
+	border-radius: 0.25rem;
+	}
+
+	.simple-carousel .carousel-btn.prev {
+	left: 0.75rem;
+	}
+
+	.simple-carousel .carousel-btn.next {
+	right: 0.75rem;
+	}
+
+	.simple-carousel .carousel-btn:hover {
+	background: rgba(0, 0, 0, 0.7);
+	}
+
+	.simple-carousel .carousel-dots {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-top: 1rem;
+	}
+
+	.simple-carousel .carousel-dot {
+	width: 0.75rem;
+	height: 0.75rem;
+	border-radius: 50%;
+	border: none;
+	background: rgba(255, 255, 255, 0.4);
+	cursor: pointer;
+	}
+
+	.simple-carousel .carousel-dot.active {
+	background: rgba(255, 255, 255, 0.95);
+	}
